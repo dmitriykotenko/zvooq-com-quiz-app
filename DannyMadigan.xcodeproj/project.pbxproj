@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3719CF2C59F3680B6CA7C33D /* libPods-DannyMadigan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89E576A085A8D6D8ED670B3F /* libPods-DannyMadigan.a */; };
+		3844E759F47E5099A528337A /* libPods-DannyMadiganTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B5DCE84FF4DFB29DB044489 /* libPods-DannyMadiganTests.a */; };
+		496FAA0FB75F8CD8BE1D2D24 /* libPods-DannyMadiganUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E51C2819910EA5487F0FBFD /* libPods-DannyMadiganUITests.a */; };
 		5B3530241DABBFE600C84346 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3530231DABBFE600C84346 /* main.m */; };
 		5B3530271DABBFE600C84346 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3530261DABBFE600C84346 /* AppDelegate.m */; };
 		5B35302A1DABBFE600C84346 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3530291DABBFE600C84346 /* ViewController.m */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F973154C2F9CFC799844CC3 /* Pods-DannyMadigan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DannyMadigan.release.xcconfig"; path = "Pods/Target Support Files/Pods-DannyMadigan/Pods-DannyMadigan.release.xcconfig"; sourceTree = "<group>"; };
+		13D46F7408C40FB8FEFF7272 /* Pods-DannyMadigan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DannyMadigan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DannyMadigan/Pods-DannyMadigan.debug.xcconfig"; sourceTree = "<group>"; };
+		2D588C65851825DA6915A159 /* Pods-DannyMadiganTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DannyMadiganTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DannyMadiganTests/Pods-DannyMadiganTests.release.xcconfig"; sourceTree = "<group>"; };
 		5B35301F1DABBFE600C84346 /* DannyMadigan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DannyMadigan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B3530231DABBFE600C84346 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5B3530251DABBFE600C84346 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +57,12 @@
 		5B3530431DABBFE600C84346 /* DannyMadiganUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DannyMadiganUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B3530471DABBFE600C84346 /* DannyMadiganUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DannyMadiganUITests.m; sourceTree = "<group>"; };
 		5B3530491DABBFE600C84346 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		621029365F5E51EE2B5C3FE0 /* Pods-DannyMadiganUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DannyMadiganUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DannyMadiganUITests/Pods-DannyMadiganUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6E51C2819910EA5487F0FBFD /* libPods-DannyMadiganUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DannyMadiganUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		850700DFE7268BF4248C563D /* Pods-DannyMadiganUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DannyMadiganUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DannyMadiganUITests/Pods-DannyMadiganUITests.release.xcconfig"; sourceTree = "<group>"; };
+		89E576A085A8D6D8ED670B3F /* libPods-DannyMadigan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DannyMadigan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B5DCE84FF4DFB29DB044489 /* libPods-DannyMadiganTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DannyMadiganTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED727C1088A4910702FBEA52 /* Pods-DannyMadiganTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DannyMadiganTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DannyMadiganTests/Pods-DannyMadiganTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3719CF2C59F3680B6CA7C33D /* libPods-DannyMadigan.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3844E759F47E5099A528337A /* libPods-DannyMadiganTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +86,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				496FAA0FB75F8CD8BE1D2D24 /* libPods-DannyMadiganUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		073079318F10E1E68CED86B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89E576A085A8D6D8ED670B3F /* libPods-DannyMadigan.a */,
+				9B5DCE84FF4DFB29DB044489 /* libPods-DannyMadiganTests.a */,
+				6E51C2819910EA5487F0FBFD /* libPods-DannyMadiganUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5B3530161DABBFE600C84346 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +110,8 @@
 				5B35303B1DABBFE600C84346 /* DannyMadiganTests */,
 				5B3530461DABBFE600C84346 /* DannyMadiganUITests */,
 				5B3530201DABBFE600C84346 /* Products */,
+				F0783CC3E373C6B292A29525 /* Pods */,
+				073079318F10E1E68CED86B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +167,19 @@
 			path = DannyMadiganUITests;
 			sourceTree = "<group>";
 		};
+		F0783CC3E373C6B292A29525 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				13D46F7408C40FB8FEFF7272 /* Pods-DannyMadigan.debug.xcconfig */,
+				0F973154C2F9CFC799844CC3 /* Pods-DannyMadigan.release.xcconfig */,
+				ED727C1088A4910702FBEA52 /* Pods-DannyMadiganTests.debug.xcconfig */,
+				2D588C65851825DA6915A159 /* Pods-DannyMadiganTests.release.xcconfig */,
+				621029365F5E51EE2B5C3FE0 /* Pods-DannyMadiganUITests.debug.xcconfig */,
+				850700DFE7268BF4248C563D /* Pods-DannyMadiganUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +187,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B35304C1DABBFE600C84346 /* Build configuration list for PBXNativeTarget "DannyMadigan" */;
 			buildPhases = (
+				E38093A0969F19B480B0CE04 /* [CP] Check Pods Manifest.lock */,
 				5B35301B1DABBFE600C84346 /* Sources */,
 				5B35301C1DABBFE600C84346 /* Frameworks */,
 				5B35301D1DABBFE600C84346 /* Resources */,
+				B6EF2400F80F1B6F979C61D4 /* [CP] Embed Pods Frameworks */,
+				F506820B9F9025791253F870 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,9 +207,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B35304F1DABBFE600C84346 /* Build configuration list for PBXNativeTarget "DannyMadiganTests" */;
 			buildPhases = (
+				6DD0977AF1AEB1E29AB9524D /* [CP] Check Pods Manifest.lock */,
 				5B3530341DABBFE600C84346 /* Sources */,
 				5B3530351DABBFE600C84346 /* Frameworks */,
 				5B3530361DABBFE600C84346 /* Resources */,
+				81F1FAC8743500FA0C05EBA1 /* [CP] Embed Pods Frameworks */,
+				05BE9DCBA261EA8B0D288E61 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,9 +228,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B3530521DABBFE600C84346 /* Build configuration list for PBXNativeTarget "DannyMadiganUITests" */;
 			buildPhases = (
+				661706E46BD3EA857DC30606 /* [CP] Check Pods Manifest.lock */,
 				5B35303F1DABBFE600C84346 /* Sources */,
 				5B3530401DABBFE600C84346 /* Frameworks */,
 				5B3530411DABBFE600C84346 /* Resources */,
+				651B7A0A1EC2921381BE6C04 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,6 +315,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05BE9DCBA261EA8B0D288E61 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DannyMadiganTests/Pods-DannyMadiganTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		651B7A0A1EC2921381BE6C04 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DannyMadiganUITests/Pods-DannyMadiganUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		661706E46BD3EA857DC30606 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6DD0977AF1AEB1E29AB9524D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		81F1FAC8743500FA0C05EBA1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DannyMadiganTests/Pods-DannyMadiganTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6EF2400F80F1B6F979C61D4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DannyMadigan/Pods-DannyMadigan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E38093A0969F19B480B0CE04 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F506820B9F9025791253F870 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DannyMadigan/Pods-DannyMadigan-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5B35301B1DABBFE600C84346 /* Sources */ = {
@@ -422,28 +593,35 @@
 		};
 		5B35304D1DABBFE600C84346 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13D46F7408C40FB8FEFF7272 /* Pods-DannyMadigan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DannyMadigan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Fiasko.DannyMadigan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		5B35304E1DABBFE600C84346 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F973154C2F9CFC799844CC3 /* Pods-DannyMadigan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DannyMadigan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Fiasko.DannyMadigan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		5B3530501DABBFE600C84346 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED727C1088A4910702FBEA52 /* Pods-DannyMadiganTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = DannyMadiganTests/Info.plist;
@@ -456,6 +634,7 @@
 		};
 		5B3530511DABBFE600C84346 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D588C65851825DA6915A159 /* Pods-DannyMadiganTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = DannyMadiganTests/Info.plist;
@@ -468,6 +647,7 @@
 		};
 		5B3530531DABBFE600C84346 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 621029365F5E51EE2B5C3FE0 /* Pods-DannyMadiganUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = DannyMadiganUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -479,6 +659,7 @@
 		};
 		5B3530541DABBFE600C84346 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 850700DFE7268BF4248C563D /* Pods-DannyMadiganUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = DannyMadiganUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -507,6 +688,7 @@
 				5B35304E1DABBFE600C84346 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B35304F1DABBFE600C84346 /* Build configuration list for PBXNativeTarget "DannyMadiganTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +697,7 @@
 				5B3530511DABBFE600C84346 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B3530521DABBFE600C84346 /* Build configuration list for PBXNativeTarget "DannyMadiganUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +706,7 @@
 				5B3530541DABBFE600C84346 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
