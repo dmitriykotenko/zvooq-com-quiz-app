@@ -9,6 +9,7 @@
 #import "DmMoviesListViewController.h"
 
 #import "DmMovieCell.h"
+#import "DmMovieViewController.h"
 #import "DmRestApi.h"
 #import "DmSearchView.h"
 
@@ -142,6 +143,14 @@ const CGFloat DmMoviesCollectionViewPadding = DmMoviesCollectionViewSpacing;
     cell.movie = self.movies[indexPath.row];
 
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    DmMovieViewController * movieViewController = [DmMovieViewController new];
+    movieViewController.movie = self.movies[indexPath.row];
+    
+    [self presentViewController:movieViewController animated:YES completion:nil];
 }
 
 @end

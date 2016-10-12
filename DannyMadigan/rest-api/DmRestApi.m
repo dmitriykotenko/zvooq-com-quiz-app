@@ -93,7 +93,7 @@ const NSString * DmRestApiResultFormat = @"json";
 }
 
 - (void)getMovieById:(NSString *)movieId
-             success:(void (^)(NSObject *))successHandler
+             success:(void (^)(DmMovie *))successHandler
                error:(void (^)(NSError *))errorHandler
 {
     if (! movieId) {

@@ -22,7 +22,7 @@
            error:(void (^)(NSError * error))errorHandler;
 
 - (void)getMovieById:(NSString *)movieId
-             success:(void(^)(NSObject * movie))successHandler
+             success:(void(^)(DmMovie * movie))successHandler
                error:(void(^)(NSError * error))errorHandler;
 
 @end

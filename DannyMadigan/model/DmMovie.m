@@ -23,23 +23,23 @@
         
         self.year = [movieJson[@"Year"] intValue];
         
-        self.rated = movieJson[@"rated"];
-        self.releasedAt = movieJson[@"released"];
-        self.runtime = movieJson[@"runtime"];
-        self.genre = movieJson[@"genre"];
+        self.rated = movieJson[@"Rated"];
+        self.releasedAt = movieJson[@"Released"];
+        self.runtime = movieJson[@"Runtime"];
+        self.genre = movieJson[@"Genre"];
         
-        self.director = movieJson[@"director"];
-        self.writer = movieJson[@"writer"];
-        self.actors = movieJson[@"actors"];
+        self.director = movieJson[@"Director"];
+        self.writer = movieJson[@"Writer"];
+        self.actors = movieJson[@"Actors"];
         
-        self.plot = movieJson[@"plot"];
+        self.plot = movieJson[@"Plot"];
         
-        self.language = movieJson[@"language"];
-        self.country = movieJson[@"country"];
+        self.language = movieJson[@"Language"];
+        self.country = movieJson[@"Country"];
         
-        self.awards = movieJson[@"awards"];
-        self.imdbRating = [movieJson[@"runtime"] doubleValue];
-        self.imdbVotes = [movieJson[@"runtime"] intValue];
+        self.awards = movieJson[@"Awards"];
+        self.imdbRating = [movieJson[@"imdbRating"] doubleValue];
+        self.imdbVotes = [movieJson[@"imdbVotes"] intValue];
     }
     
     if (!self.movieId || !self.title || !self.posterUrl) {
