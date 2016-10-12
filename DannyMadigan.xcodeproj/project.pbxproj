@@ -18,6 +18,15 @@
 		5B3530321DABBFE600C84346 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3530301DABBFE600C84346 /* LaunchScreen.storyboard */; };
 		5B35303D1DABBFE600C84346 /* DannyMadiganTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35303C1DABBFE600C84346 /* DannyMadiganTests.m */; };
 		5B3530481DABBFE600C84346 /* DannyMadiganUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3530471DABBFE600C84346 /* DannyMadiganUITests.m */; };
+		5B4AFE1C1DACE3E80023F455 /* DmRestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AFE1B1DACE3E80023F455 /* DmRestApi.m */; };
+		5B4AFE201DACE52B0023F455 /* DmMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AFE1F1DACE52B0023F455 /* DmMovie.m */; };
+		5B4AFE251DAD17DB0023F455 /* DmMoviesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AFE231DAD17DB0023F455 /* DmMoviesListViewController.m */; };
+		5B4AFE261DAD17DB0023F455 /* DmMoviesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B4AFE241DAD17DB0023F455 /* DmMoviesListViewController.xib */; };
+		5B4AFE2C1DAD1B220023F455 /* DmMovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AFE2A1DAD1B220023F455 /* DmMovieCell.m */; };
+		5B4AFE2D1DAD1B220023F455 /* DmMovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B4AFE2B1DAD1B220023F455 /* DmMovieCell.xib */; };
+		5B4AFE2F1DAE5B8E0023F455 /* DmSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B4AFE2E1DAE5B8E0023F455 /* DmSearchView.xib */; };
+		5B4AFE321DAE5BAD0023F455 /* DmSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AFE311DAE5BAD0023F455 /* DmSearchView.m */; };
+		5B4AFE351DAE5CFA0023F455 /* DmSearchResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AFE341DAE5CFA0023F455 /* DmSearchResults.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +66,21 @@
 		5B3530431DABBFE600C84346 /* DannyMadiganUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DannyMadiganUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B3530471DABBFE600C84346 /* DannyMadiganUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DannyMadiganUITests.m; sourceTree = "<group>"; };
 		5B3530491DABBFE600C84346 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B4AFE1A1DACE3E80023F455 /* DmRestApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DmRestApi.h; sourceTree = "<group>"; };
+		5B4AFE1B1DACE3E80023F455 /* DmRestApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DmRestApi.m; sourceTree = "<group>"; };
+		5B4AFE1E1DACE52B0023F455 /* DmMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DmMovie.h; sourceTree = "<group>"; };
+		5B4AFE1F1DACE52B0023F455 /* DmMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DmMovie.m; sourceTree = "<group>"; };
+		5B4AFE221DAD17DB0023F455 /* DmMoviesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DmMoviesListViewController.h; sourceTree = "<group>"; };
+		5B4AFE231DAD17DB0023F455 /* DmMoviesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DmMoviesListViewController.m; sourceTree = "<group>"; };
+		5B4AFE241DAD17DB0023F455 /* DmMoviesListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DmMoviesListViewController.xib; sourceTree = "<group>"; };
+		5B4AFE291DAD1B220023F455 /* DmMovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DmMovieCell.h; sourceTree = "<group>"; };
+		5B4AFE2A1DAD1B220023F455 /* DmMovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DmMovieCell.m; sourceTree = "<group>"; };
+		5B4AFE2B1DAD1B220023F455 /* DmMovieCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DmMovieCell.xib; sourceTree = "<group>"; };
+		5B4AFE2E1DAE5B8E0023F455 /* DmSearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DmSearchView.xib; sourceTree = "<group>"; };
+		5B4AFE301DAE5BAD0023F455 /* DmSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DmSearchView.h; sourceTree = "<group>"; };
+		5B4AFE311DAE5BAD0023F455 /* DmSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DmSearchView.m; sourceTree = "<group>"; };
+		5B4AFE331DAE5CFA0023F455 /* DmSearchResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DmSearchResults.h; sourceTree = "<group>"; };
+		5B4AFE341DAE5CFA0023F455 /* DmSearchResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DmSearchResults.m; sourceTree = "<group>"; };
 		621029365F5E51EE2B5C3FE0 /* Pods-DannyMadiganUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DannyMadiganUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DannyMadiganUITests/Pods-DannyMadiganUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6E51C2819910EA5487F0FBFD /* libPods-DannyMadiganUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DannyMadiganUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		850700DFE7268BF4248C563D /* Pods-DannyMadiganUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DannyMadiganUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DannyMadiganUITests/Pods-DannyMadiganUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +152,9 @@
 		5B3530211DABBFE600C84346 /* DannyMadigan */ = {
 			isa = PBXGroup;
 			children = (
+				5B4AFE1D1DACE51E0023F455 /* model */,
+				5B4AFE191DACE3A40023F455 /* rest-api */,
+				5B4AFE211DAD17C60023F455 /* screens */,
 				5B3530251DABBFE600C84346 /* AppDelegate.h */,
 				5B3530261DABBFE600C84346 /* AppDelegate.m */,
 				5B3530281DABBFE600C84346 /* ViewController.h */,
@@ -165,6 +192,42 @@
 				5B3530491DABBFE600C84346 /* Info.plist */,
 			);
 			path = DannyMadiganUITests;
+			sourceTree = "<group>";
+		};
+		5B4AFE191DACE3A40023F455 /* rest-api */ = {
+			isa = PBXGroup;
+			children = (
+				5B4AFE1A1DACE3E80023F455 /* DmRestApi.h */,
+				5B4AFE1B1DACE3E80023F455 /* DmRestApi.m */,
+			);
+			path = "rest-api";
+			sourceTree = "<group>";
+		};
+		5B4AFE1D1DACE51E0023F455 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				5B4AFE1E1DACE52B0023F455 /* DmMovie.h */,
+				5B4AFE1F1DACE52B0023F455 /* DmMovie.m */,
+				5B4AFE331DAE5CFA0023F455 /* DmSearchResults.h */,
+				5B4AFE341DAE5CFA0023F455 /* DmSearchResults.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		5B4AFE211DAD17C60023F455 /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				5B4AFE291DAD1B220023F455 /* DmMovieCell.h */,
+				5B4AFE2A1DAD1B220023F455 /* DmMovieCell.m */,
+				5B4AFE2B1DAD1B220023F455 /* DmMovieCell.xib */,
+				5B4AFE221DAD17DB0023F455 /* DmMoviesListViewController.h */,
+				5B4AFE231DAD17DB0023F455 /* DmMoviesListViewController.m */,
+				5B4AFE241DAD17DB0023F455 /* DmMoviesListViewController.xib */,
+				5B4AFE301DAE5BAD0023F455 /* DmSearchView.h */,
+				5B4AFE311DAE5BAD0023F455 /* DmSearchView.m */,
+				5B4AFE2E1DAE5B8E0023F455 /* DmSearchView.xib */,
+			);
+			path = screens;
 			sourceTree = "<group>";
 		};
 		F0783CC3E373C6B292A29525 /* Pods */ = {
@@ -295,7 +358,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B3530321DABBFE600C84346 /* LaunchScreen.storyboard in Resources */,
+				5B4AFE2D1DAD1B220023F455 /* DmMovieCell.xib in Resources */,
 				5B35302F1DABBFE600C84346 /* Assets.xcassets in Resources */,
+				5B4AFE2F1DAE5B8E0023F455 /* DmSearchView.xib in Resources */,
+				5B4AFE261DAD17DB0023F455 /* DmMoviesListViewController.xib in Resources */,
 				5B35302D1DABBFE600C84346 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,8 +511,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B35302A1DABBFE600C84346 /* ViewController.m in Sources */,
+				5B4AFE201DACE52B0023F455 /* DmMovie.m in Sources */,
+				5B4AFE251DAD17DB0023F455 /* DmMoviesListViewController.m in Sources */,
+				5B4AFE321DAE5BAD0023F455 /* DmSearchView.m in Sources */,
 				5B3530271DABBFE600C84346 /* AppDelegate.m in Sources */,
 				5B3530241DABBFE600C84346 /* main.m in Sources */,
+				5B4AFE351DAE5CFA0023F455 /* DmSearchResults.m in Sources */,
+				5B4AFE1C1DACE3E80023F455 /* DmRestApi.m in Sources */,
+				5B4AFE2C1DAD1B220023F455 /* DmMovieCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

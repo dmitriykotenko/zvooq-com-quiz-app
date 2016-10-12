@@ -8,9 +8,15 @@
 
 #import "ViewController.h"
 
+#import "DmMoviesListViewController.h"
+
+
+
 @interface ViewController ()
 
 @end
+
+
 
 @implementation ViewController
 
@@ -25,5 +31,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)showMovies:(id)sender {
+    UIViewController * moviesListViewController = [DmMoviesListViewController new];
+    
+    [self presentViewController:moviesListViewController animated:YES completion:nil];
+}
 
 @end
