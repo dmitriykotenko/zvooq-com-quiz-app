@@ -56,6 +56,9 @@ const CGFloat DmVeryLargeHeight = 1000000;
             self.moviesLazyArray = lazyArray;
             self.movies = lazyArray.movies;
             
+            // Reset 'load next page...' status.
+            self.loadingIsInProgress = NO;
+            
             lazyArray.nextPageLoadedHandler = ^(NSArray * allMovies, NSArray * lastPage, NSError * error) {
                 // Do nothing if the lazy array has been changed.
                 if (!error && (lazyArray == self.moviesLazyArray)) {
