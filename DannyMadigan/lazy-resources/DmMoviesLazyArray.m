@@ -50,7 +50,7 @@
      page:nextPageNumber
      success:^(DmSearchResults * results) {
          self.lastPageLoaded = nextPageNumber;
-         [self.movies arrayByAddingObjectsFromArray:results.movies];
+         self.movies = [self.movies arrayByAddingObjectsFromArray:results.movies];
          if (self.nextPageLoadedHandler) {
              self.nextPageLoadedHandler(self.movies, results.movies, nil);
          }

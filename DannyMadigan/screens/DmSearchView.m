@@ -119,6 +119,11 @@
     self.noInternetLabel.hidden = YES;
 }
 
+- (void)hideKeyboard
+{
+    [self.searchBar resignFirstResponder];
+}
+
 #pragma mark - Search Bar delegate
 
 - (void)searchBar:(UISearchBar *)searchBar

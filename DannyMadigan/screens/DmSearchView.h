@@ -17,4 +17,6 @@
 // Signal: (query, results, loadingIsInProgress, error)
 @property (nonatomic, copy) void (^searchDidFinish)(DmMoviesLazyArray * moviesLazyArray, NSError * error);
 
+- (void)hideKeyboard;
+
 @end

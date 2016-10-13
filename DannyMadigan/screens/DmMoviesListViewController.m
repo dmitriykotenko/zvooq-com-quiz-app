@@ -8,6 +8,8 @@
 
 #import "DmMoviesListViewController.h"
 
+#import <libkern/OSAtomic.h>
+
 #import "DmMovieCell.h"
 #import "DmMovieViewController.h"
 #import "DmRestApi.h"
@@ -20,6 +22,8 @@ const CGFloat DmMoviesCollectionViewPadding = DmMoviesCollectionViewSpacing;
 
 
 @interface DmMoviesListViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+
+@property (atomic) BOOL loadingIsInProgress;
 
 @property (weak, nonatomic) IBOutlet DmSearchView * searchView;
 @property (weak, nonatomic) IBOutlet UICollectionView * moviesCollectionView;
@@ -47,6 +51,19 @@ const CGFloat DmMoviesCollectionViewPadding = DmMoviesCollectionViewSpacing;
         if (!error) {
             self.moviesLazyArray = lazyArray;
             self.movies = lazyArray.movies;
+            
+            lazyArray.nextPageLoadedHandler = ^(NSArray * allMovies, NSArray * lastPage, NSError * error) {
+                // Do nothing if the lazy array has been changed.
+                if (!error && (lazyArray == self.moviesLazyArray)) {
+                    self.movies = allMovies;
+                    [self.moviesCollectionView reloadData];
+                }
+                // Todo: show error.
+
+                if (lazyArray == self.moviesLazyArray) {
+                    self.loadingIsInProgress = NO;
+                }
+            };
 
             [self.moviesCollectionView reloadData];
         }
@@ -101,6 +118,36 @@ const CGFloat DmMoviesCollectionViewPadding = DmMoviesCollectionViewSpacing;
 
 - (void)hideLoadingMoreIndicator
 {
+    
+}
+
+#pragma mark - Scroll View delegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    // Hide keyboard once the user began scrolling.
+    [self.searchView hideKeyboard];
+    
+    if (scrollView.contentSize.height - scrollView.contentOffset.y - scrollView.frame.size.height < 100) {
+        [self tryToLoadNextPage];
+    }
+}
+
+- (void)tryToLoadNextPage
+{
+    if (! self.loadingIsInProgress) {
+        self.loadingIsInProgress = YES;
+        
+        [self.moviesLazyArray loadNextPage];
+    }
+}
+
+- (void)nextPageIsLoaded
+{
+    // 1. Show loading indicator
+    // 2. Request lazy array for the next page
+    // 3. Once the page is loaded, update collection view and hide loading indicator
+    // 4. If data loading has failed, show error message.
     
 }
 
