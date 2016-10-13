@@ -11,6 +11,7 @@
                 <outlet property="dataLoadingIndicator" destination="CO7-KM-3Iu" id="N53-4y-7VO"/>
                 <outlet property="mainView" destination="iN0-l3-epB" id="FVH-XM-K0X"/>
                 <outlet property="noInternetLabel" destination="q2n-sl-LMO" id="oUs-r8-WYT"/>
+                <outlet property="noInternetPanelConstraint" destination="uda-rw-Bjn" id="A9G-er-BEV"/>
                 <outlet property="searchBar" destination="ulR-2l-kkq" id="52r-d5-x9G"/>
                 <outlet property="searchFailedLabel" destination="jBh-yX-Tfm" id="NJH-yB-zct"/>
                 <outlet property="tryAgainButton" destination="CCm-vw-VVn" id="WAo-JB-wcR"/>
@@ -18,10 +19,10 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vcd-pq-qwd" userLabel="Search view">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vcd-pq-qwd" userLabel="Search panel">
                     <subviews>
                         <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="ulR-2l-kkq">
                             <textInputTraits key="textInputTraits" returnKeyType="search"/>
@@ -44,20 +45,13 @@
                                 <action selector="retrySearch:" destination="-1" eventType="touchUpInside" id="fUE-9J-6vL"/>
                             </connections>
                         </button>
-                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Internet" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2n-sl-LMO">
-                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                            <color key="textColor" red="0.0" green="0.64085648149999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.89449757340000002" green="0.98448044059999995" blue="0.8559736013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="58" id="1xi-Lc-dnc"/>
-                        <constraint firstItem="q2n-sl-LMO" firstAttribute="baseline" secondItem="jBh-yX-Tfm" secondAttribute="baseline" id="4Iw-Ek-8bh"/>
                         <constraint firstAttribute="trailing" secondItem="CCm-vw-VVn" secondAttribute="trailing" constant="8" id="7zm-lC-enI"/>
                         <constraint firstAttribute="bottom" secondItem="ulR-2l-kkq" secondAttribute="bottom" constant="7" id="CXr-hb-mkB"/>
                         <constraint firstItem="ulR-2l-kkq" firstAttribute="leading" secondItem="Vcd-pq-qwd" secondAttribute="leading" id="DcP-iC-Cjd"/>
-                        <constraint firstItem="q2n-sl-LMO" firstAttribute="trailing" secondItem="jBh-yX-Tfm" secondAttribute="trailing" id="OQI-7T-uc8"/>
                         <constraint firstItem="ulR-2l-kkq" firstAttribute="top" secondItem="Vcd-pq-qwd" secondAttribute="top" constant="7" id="YQR-hU-9Ws"/>
                         <constraint firstItem="jBh-yX-Tfm" firstAttribute="baseline" secondItem="CCm-vw-VVn" secondAttribute="baseline" id="g5M-vA-jim"/>
                         <constraint firstItem="ulR-2l-kkq" firstAttribute="trailing" secondItem="jBh-yX-Tfm" secondAttribute="trailing" constant="40" id="kbv-ed-FoM"/>
@@ -67,17 +61,37 @@
                         <constraint firstItem="CCm-vw-VVn" firstAttribute="leading" secondItem="ulR-2l-kkq" secondAttribute="trailing" constant="5" id="yrj-BJ-1YZ"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqa-Ve-9WQ" userLabel="No Internet panel">
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Internet" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2n-sl-LMO">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="q2n-sl-LMO" secondAttribute="trailing" constant="20" id="I6P-KB-vPH"/>
+                        <constraint firstItem="q2n-sl-LMO" firstAttribute="leading" secondItem="mqa-Ve-9WQ" secondAttribute="leading" constant="20" id="IOg-v4-HF8"/>
+                        <constraint firstAttribute="bottom" secondItem="q2n-sl-LMO" secondAttribute="bottom" constant="8" id="UTq-Qe-N2W"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="uda-rw-Bjn"/>
+                        <constraint firstItem="q2n-sl-LMO" firstAttribute="top" secondItem="mqa-Ve-9WQ" secondAttribute="top" constant="8" id="xdW-c3-YEB"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.16066687090000001" green="0.42638888889999998" blue="0.7459490741" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Vcd-pq-qwd" secondAttribute="trailing" id="49c-WX-XFd"/>
-                <constraint firstAttribute="bottom" secondItem="Vcd-pq-qwd" secondAttribute="bottom" constant="10" id="DP6-de-Uv0"/>
+                <constraint firstAttribute="bottom" secondItem="mqa-Ve-9WQ" secondAttribute="bottom" id="5nx-rv-pxi"/>
+                <constraint firstItem="mqa-Ve-9WQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UWA-Ul-Btd"/>
                 <constraint firstItem="Vcd-pq-qwd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="az7-0A-ORD"/>
+                <constraint firstAttribute="trailing" secondItem="mqa-Ve-9WQ" secondAttribute="trailing" id="hmg-GH-qKx"/>
                 <constraint firstItem="Vcd-pq-qwd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lzY-5m-lA0"/>
+                <constraint firstItem="mqa-Ve-9WQ" firstAttribute="top" secondItem="Vcd-pq-qwd" secondAttribute="bottom" id="xkB-xc-03J"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="32.5" y="-231.5"/>
+            <point key="canvasLocation" x="32.5" y="-232"/>
         </view>
     </objects>
 </document>

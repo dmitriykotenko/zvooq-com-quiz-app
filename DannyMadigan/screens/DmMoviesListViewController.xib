@@ -23,7 +23,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHJ-4u-PA0" userLabel="Search view" customClass="DmSearchView">
                     <color key="backgroundColor" red="1" green="0.96380210527689236" blue="0.8027199074074074" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="68" id="DJX-T5-IAh"/>
+                        <constraint firstAttribute="height" priority="750" constant="68" id="DJX-T5-IAh"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NbQ-ja-wQq" userLabel="Last Query view">

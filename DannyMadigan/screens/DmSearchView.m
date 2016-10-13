@@ -8,19 +8,27 @@
 
 #import "DmSearchView.h"
 
+#import <AFNetworking.h>
+
+#import "AppDelegate.h"
 #import "DmRestApi.h"
 
 
 
 @interface DmSearchView () <UISearchBarDelegate>
 
-@property (strong, nonatomic) IBOutlet UIView *mainView;
+@property (strong, nonatomic) IBOutlet UIView * mainView;
 
-@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *dataLoadingIndicator;
-@property (weak, nonatomic) IBOutlet UILabel *searchFailedLabel;
-@property (weak, nonatomic) IBOutlet UILabel *noInternetLabel;
-@property (weak, nonatomic) IBOutlet UIButton *tryAgainButton;
+@property (weak, nonatomic) IBOutlet UISearchBar * searchBar;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView * dataLoadingIndicator;
+@property (weak, nonatomic) IBOutlet UILabel * searchFailedLabel;
+@property (weak, nonatomic) IBOutlet UILabel * noInternetLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *noInternetPanelConstraint;
+@property (weak, nonatomic) IBOutlet UIButton * tryAgainButton;
+
+@property (strong, nonatomic) AFNetworkReachabilityManager * reachabilityManager;
+
+@property (nonatomic) BOOL searchHasSucceeded;
 
 @end
 
@@ -66,6 +74,24 @@
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.mainView attribute:NSLayoutAttributeRight multiplier:1 constant:0]];
     
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.mainView attribute:NSLayoutAttributeBottom multiplier:1 constant:0]];
+    
+    // Subscribe to notifications about network reachability.
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(reachabilityChangeHandler)
+     name:DmNotificationReachabilityHasChanged
+     object:nil];
+    
+    [self reachabilityChangeHandler];
+}
+
+- (void)reachabilityChangeHandler
+{
+    if ([AFNetworkReachabilityManager sharedManager].isReachable) {
+        [self internetIsOn];
+    } else {
+        [self internetIsOff];
+    }
 }
 
 - (NSString *)currentQuery
@@ -80,12 +106,14 @@
 
 - (void)search
 {
-    // Todo: show activity indicator
-    // Todo: hide errors and buttons
-    // Todo: wait until search is completed
-    
+    self.searchHasSucceeded = NO;
     // Todo: cancel previous search.
-    self.noInternetLabel.hidden = YES;
+    
+    // If there is no Internet now, do nothing.
+    if (! [AFNetworkReachabilityManager sharedManager].isReachable) {
+        return;
+    }
+    
     self.searchFailedLabel.hidden = YES;
     self.tryAgainButton.hidden = YES;
     
@@ -98,6 +126,8 @@
      page:1
      success:^(DmSearchResults * results) {
         [self.dataLoadingIndicator stopAnimating];
+         self.searchHasSucceeded = YES;
+         
          DmMoviesLazyArray * lazyArray = [[DmMoviesLazyArray alloc] initWithSearchResults:results];
 
          if (self.searchDidFinish) {
@@ -107,21 +137,28 @@
      error:^(NSError *error) {
         [self.dataLoadingIndicator stopAnimating];
          self.searchFailedLabel.hidden = NO;
+         // Do not show 'Try Again' button if there is no internet.
+         self.tryAgainButton.hidden = ! [AFNetworkReachabilityManager sharedManager].isReachable;
          self.searchDidFinish(nil, error);
     }];
 }
 
 - (void)internetIsOff
 {
+    self.noInternetPanelConstraint.constant = 1000000;
+    
     // Todo: cancel current request to the server.
-    self.noInternetLabel.hidden = NO;
     [self.dataLoadingIndicator stopAnimating];
     self.tryAgainButton.hidden = YES;
 }
 
 - (void)internetIsOn
 {
-    self.noInternetLabel.hidden = YES;
+    self.noInternetPanelConstraint.constant = 0;
+    
+    if (! self.searchHasSucceeded) {
+        [self retrySearch:self];
+    }
 }
 
 - (void)hideKeyboard

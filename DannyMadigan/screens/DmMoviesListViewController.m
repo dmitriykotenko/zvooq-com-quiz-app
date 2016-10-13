@@ -19,7 +19,6 @@
 
 const CGFloat DmMoviesCollectionViewSpacing = 20;
 const CGFloat DmMoviesCollectionViewPadding = DmMoviesCollectionViewSpacing;
-const CGFloat DmVeryLargeHeight = 1000000;
 
 
 @interface DmMoviesListViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
@@ -117,7 +116,7 @@ const CGFloat DmVeryLargeHeight = 1000000;
 
 - (void)showQueryAnnotation
 {
-    self.queryAnnotationHeightConstraint.constant = DmVeryLargeHeight;
+    self.queryAnnotationHeightConstraint.constant = 1000000;
 }
 
 - (void)hideQueryAnnotation

@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+
+
+extern NSString * DmNotificationReachabilityHasChanged;
+
+
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

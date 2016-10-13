@@ -10,6 +10,8 @@
 
 #import <AFNetworking.h>
 
+
+
 const NSString * DmRestApiResultFormat = @"json";
 
 
@@ -42,10 +44,15 @@ const NSString * DmRestApiResultFormat = @"json";
     if (self) {
         self.sessionManager =
         [[AFHTTPSessionManager alloc]
-         initWithBaseURL:[NSURL URLWithString:@"https://www.omdbapi.com/"]];
+         initWithBaseURL:[self baseUrl]];
     }
     
     return self;
+}
+
+- (NSURL *)baseUrl
+{
+    return [NSURL URLWithString:@"https://www.omdbapi.com/"];
 }
 
 - (void)searchBy:(NSString *)searchQuery
@@ -67,7 +74,7 @@ const NSString * DmRestApiResultFormat = @"json";
       @"page": [NSNumber numberWithUnsignedLong:page],
       @"r": DmRestApiResultFormat
       };
-
+    
     DmSearchResults * results = [DmSearchResults new];
     results.query = searchQuery;
     
@@ -76,8 +83,8 @@ const NSString * DmRestApiResultFormat = @"json";
      parameters:params
      progress:nil
      success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-         int total = [responseObject[@"totalResults"] intValue]; //todo: parse total number of movies
-
+         int total = [responseObject[@"totalResults"] intValue];
+         
          NSMutableArray * movies = [NSMutableArray array];
          NSArray * moviesJson = responseObject[@"Search"];
          
@@ -91,10 +98,14 @@ const NSString * DmRestApiResultFormat = @"json";
          results.totalNumberOfMovies = total;
          results.movies = movies;
          
-         successHandler(results);
+         if (successHandler) {
+             successHandler(results);
+         }
      }
      failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-         errorHandler(error);
+         if (errorHandler) {
+             errorHandler(error);
+         }
      }];
 }
 
@@ -118,7 +129,7 @@ const NSString * DmRestApiResultFormat = @"json";
      progress:nil
      success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
          NSDictionary * movieJson = responseObject;
-
+         
          successHandler([[DmMovie alloc] initWithJson:movieJson]);
      }
      failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
