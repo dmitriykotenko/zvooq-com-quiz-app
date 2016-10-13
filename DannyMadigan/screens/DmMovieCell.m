@@ -26,6 +26,14 @@
 
 @implementation DmMovieCell
 
++ (CGSize)sizeForWidth:(CGFloat)width
+{
+    const CGFloat TitleOverhead = 40;
+    CGFloat height = width * 1.5 + TitleOverhead;
+    
+    return CGSizeMake(width, height);
+}
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -72,7 +80,7 @@
     // AFNetworking does the following stuff automatically:
     // 1. Set image once the image is loaded.
     // 2. Do not update the image if the movie has been changed after the loading has began.
-    [self.posterImageView setImageWithURL:movie.posterUrl];
+    [self.posterImageView setImageWithURL:movie.posterUrl placeholderImage:[UIImage imageNamed:@"PosterPlaceholder"]];
 }
 
 @end

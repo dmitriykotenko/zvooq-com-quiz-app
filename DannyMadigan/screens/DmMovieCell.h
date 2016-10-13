@@ -14,6 +14,9 @@
 
 @interface DmMovieCell : UICollectionViewCell
 
+// Compute cell's height according to desired width.
++ (CGSize)sizeForWidth:(CGFloat)width;
+
 @property (nonatomic, strong) DmMovie * movie;
 
 @end

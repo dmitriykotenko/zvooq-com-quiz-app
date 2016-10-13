@@ -94,9 +94,8 @@ const CGFloat DmMoviesCollectionViewPadding = DmMoviesCollectionViewSpacing;
 - (CGSize)movieCellSize
 {
     double width = ([UIScreen mainScreen].bounds.size.width - 2 * DmMoviesCollectionViewPadding - DmMoviesCollectionViewSpacing) / 2;
-    double height = 1.5 * width;
     
-    return CGSizeMake(width, height);
+    return [DmMovieCell sizeForWidth:width];
 }
 
 - (void)showNetworkError
