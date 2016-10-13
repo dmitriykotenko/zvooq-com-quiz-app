@@ -57,7 +57,7 @@ NSString * DmLoadingDetailedInfoString = @"Loading detailed info...";
 
 - (void)updateWithCurrentMovie
 {
-    [self.posterImageView setImageWithURL:self.movie.posterUrl];
+    [self.posterImageView setImageWithURL:self.movie.posterUrl placeholderImage:[UIImage imageNamed:@"PosterPlaceholder"]];
     
     self.titleLabel.text = self.movie.title;
     

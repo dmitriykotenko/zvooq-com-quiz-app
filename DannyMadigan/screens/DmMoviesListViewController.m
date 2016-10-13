@@ -30,7 +30,7 @@ const CGFloat DmMoviesCollectionViewPadding = DmMoviesCollectionViewSpacing;
 @property (weak, nonatomic) IBOutlet UILabel *noResultsLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel * queryAnnotationLabel;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *queryAnnotationHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint * queryAnnotationHeightConstraint;
 
 @property (nonatomic, strong) NSString * searchQuery;
 @property (nonatomic, strong) NSString * lastSearchQuery;
@@ -86,7 +86,7 @@ const CGFloat DmMoviesCollectionViewPadding = DmMoviesCollectionViewSpacing;
 
 - (void)reloadMoviesCollectionView
 {
-    self.noResultsLabel.hidden = self.moviesLazyArray.movies.count > 0;
+    self.noResultsLabel.hidden = self.moviesLazyArray.query.length == 0 || self.moviesLazyArray.movies.count > 0;
 
     [self.moviesCollectionView reloadData];
 }
@@ -97,7 +97,7 @@ const CGFloat DmMoviesCollectionViewPadding = DmMoviesCollectionViewSpacing;
     
     UICollectionViewFlowLayout * layout = (UICollectionViewFlowLayout *)self.moviesCollectionView.collectionViewLayout;
     
-    layout.sectionInset = UIEdgeInsetsMake(DmMoviesCollectionViewPadding, DmMoviesCollectionViewPadding, DmMoviesCollectionViewPadding, DmMoviesCollectionViewPadding);
+    layout.sectionInset = UIEdgeInsetsMake(DmMoviesCollectionViewPadding / 2, DmMoviesCollectionViewPadding, DmMoviesCollectionViewPadding, DmMoviesCollectionViewPadding);
     
     layout.minimumLineSpacing = DmMoviesCollectionViewSpacing;
     layout.minimumInteritemSpacing = DmMoviesCollectionViewSpacing;
@@ -114,7 +114,7 @@ const CGFloat DmMoviesCollectionViewPadding = DmMoviesCollectionViewSpacing;
 
 - (void)updateQueryAnnotation
 {
-    if ([self.moviesLazyArray.query isEqualToString:self.searchView.currentQuery] || self.moviesLazyArray.movies.count == 0) {
+    if ([self.moviesLazyArray.query isEqualToString:self.searchView.currentQuery] || self.moviesLazyArray.query.length == 0) {
         [self hideQueryAnnotation];
     } else {
         self.queryAnnotationLabel.text = [NSString stringWithFormat:@"Results for query “%@”:", self.moviesLazyArray.query];

@@ -24,7 +24,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vcd-pq-qwd" userLabel="Search panel">
                     <subviews>
-                        <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="ulR-2l-kkq">
+                        <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Find movies..." translatesAutoresizingMaskIntoConstraints="NO" id="ulR-2l-kkq">
                             <textInputTraits key="textInputTraits" returnKeyType="search"/>
                             <connections>
                                 <outlet property="delegate" destination="-1" id="RcN-W7-iYV"/>
@@ -36,22 +36,23 @@
                             <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCm-vw-VVn">
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCm-vw-VVn">
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="67" id="Ntb-y7-G3h"/>
                             </constraints>
-                            <state key="normal" title="Try Again"/>
+                            <state key="normal" title="Retry"/>
                             <connections>
                                 <action selector="retrySearch:" destination="-1" eventType="touchUpInside" id="fUE-9J-6vL"/>
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.89449757340000002" green="0.98448044059999995" blue="0.8559736013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="58" id="1xi-Lc-dnc"/>
                         <constraint firstAttribute="trailing" secondItem="CCm-vw-VVn" secondAttribute="trailing" constant="8" id="7zm-lC-enI"/>
                         <constraint firstAttribute="bottom" secondItem="ulR-2l-kkq" secondAttribute="bottom" constant="7" id="CXr-hb-mkB"/>
-                        <constraint firstItem="ulR-2l-kkq" firstAttribute="leading" secondItem="Vcd-pq-qwd" secondAttribute="leading" id="DcP-iC-Cjd"/>
+                        <constraint firstItem="ulR-2l-kkq" firstAttribute="leading" secondItem="Vcd-pq-qwd" secondAttribute="leading" constant="10" id="DcP-iC-Cjd"/>
                         <constraint firstItem="ulR-2l-kkq" firstAttribute="top" secondItem="Vcd-pq-qwd" secondAttribute="top" constant="7" id="YQR-hU-9Ws"/>
                         <constraint firstItem="jBh-yX-Tfm" firstAttribute="baseline" secondItem="CCm-vw-VVn" secondAttribute="baseline" id="g5M-vA-jim"/>
                         <constraint firstItem="ulR-2l-kkq" firstAttribute="trailing" secondItem="jBh-yX-Tfm" secondAttribute="trailing" constant="40" id="kbv-ed-FoM"/>
@@ -79,7 +80,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.16066687090000001" green="0.42638888889999998" blue="0.7459490741" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Vcd-pq-qwd" secondAttribute="trailing" id="49c-WX-XFd"/>
                 <constraint firstAttribute="bottom" secondItem="mqa-Ve-9WQ" secondAttribute="bottom" id="5nx-rv-pxi"/>
