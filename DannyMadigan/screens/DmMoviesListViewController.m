@@ -145,11 +145,14 @@ const CGFloat DmMoviesCollectionViewPadding = DmMoviesCollectionViewSpacing;
 
 #pragma mark - Scroll View delegate
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     // Hide keyboard once the user began scrolling.
     [self.searchView hideKeyboard];
-    
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{    
     if (scrollView.contentSize.height - scrollView.contentOffset.y - scrollView.frame.size.height < 100) {
         [self tryToLoadNextPage];
     }
