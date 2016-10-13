@@ -171,7 +171,6 @@
 {
     self.noInternetPanelConstraint.constant = 1000000;
     
-    // Todo: cancel current request to the server.
     [self.dataLoadingIndicator stopAnimating];
     self.tryAgainButton.hidden = YES;
 }
@@ -195,7 +194,6 @@
 - (void)searchBar:(UISearchBar *)searchBar
     textDidChange:(NSString *)searchText
 {
-    // Todo: throttling.
     if (self.searchQueryDidChange) {
         self.searchQueryDidChange(self.currentQuery);
     }

@@ -18,7 +18,6 @@
         self.movieId = movieJson[@"imdbID"];
         self.title = movieJson[@"Title"];
         
-        // Todo: do not clip a poster to 300px width.
         NSString * posterUrlString = movieJson[@"Poster"];
         self.posterUrl = [NSURL URLWithString:posterUrlString];
         self.fullsizedPosterUrl = [self fullSizedPosterUrl:posterUrlString];
@@ -46,7 +45,6 @@
     }
     
     if (!self.movieId || !self.title || !self.posterUrl) {
-        // Todo: throw exception.
         return nil;
     }
     

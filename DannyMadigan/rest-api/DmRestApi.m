@@ -13,6 +13,10 @@
 
 
 const NSString * DmRestApiResultFormat = @"json";
+NSString * DmErrorDomain = @"DannyMadiganErrorDomain";
+const int DmErrorEmptySearchQuery = 1;
+const int DmErrorInvalidPageNumber = 2;
+const int DmErrorEmptyMovieId = 3;
 
 
 
@@ -60,12 +64,11 @@ const NSString * DmRestApiResultFormat = @"json";
          success:(void (^)(DmSearchResults *))successHandler
            error:(void (^)(NSError *))errorHandler
 {
-    // Todo: custom error domain.
     if (! searchQuery) {
-        errorHandler([NSError errorWithDomain:NSURLErrorDomain code:1821 userInfo:@{@"reason": @"Search query can not be nil"}]);
+        errorHandler([NSError errorWithDomain:DmErrorDomain code:DmErrorEmptySearchQuery userInfo:@{@"reason": @"Search query can not be nil"}]);
     }
     if (page < 1) {
-        errorHandler([NSError errorWithDomain:NSURLErrorDomain code:1822 userInfo:@{@"reason": @"Page must be >= 1"}]);
+        errorHandler([NSError errorWithDomain:DmErrorDomain code:DmErrorInvalidPageNumber userInfo:@{@"reason": @"Page must be >= 1"}]);
     }
     
     NSDictionary * params =
@@ -114,7 +117,7 @@ const NSString * DmRestApiResultFormat = @"json";
                error:(void (^)(NSError *))errorHandler
 {
     if (! movieId) {
-        errorHandler([NSError errorWithDomain:NSURLErrorDomain code:1821 userInfo:@{@"reason": @"Movie ID can not be nil"}]);
+        errorHandler([NSError errorWithDomain:DmErrorDomain code:DmErrorEmptyMovieId userInfo:@{@"reason": @"Movie ID can not be nil"}]);
     }
     
     NSDictionary * params =

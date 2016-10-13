@@ -66,7 +66,6 @@ const CGFloat DmMoviesCollectionViewPadding = DmMoviesCollectionViewSpacing;
                     
                     [self reloadMoviesCollectionView];
                 }
-                // Todo: show error.
 
                 if (lazyArray == self.moviesLazyArray) {
                     self.loadingIsInProgress = NO;

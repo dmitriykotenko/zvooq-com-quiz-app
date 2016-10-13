@@ -13,6 +13,10 @@
 
 
 
+extern NSString * DmErrorDomain;
+
+
+
 @interface DmRestApi : NSObject
 
 + (instancetype)shared;

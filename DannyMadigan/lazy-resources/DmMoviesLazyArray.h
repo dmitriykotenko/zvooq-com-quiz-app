@@ -22,7 +22,6 @@
 @property (nonatomic, copy) void (^nextPageLoadedHandler)(NSArray * allMovies, NSArray * lastPage, NSError * error);
 
 - (instancetype)initWithSearchResults:(DmSearchResults *)searchResults;
-//                nextPageLoadedHandler:(void (^)(NSArray * allMovies, NSArray * lastPage, NSError * error))pageLoadedHandler;
 
 - (void)loadNextPage;
 
