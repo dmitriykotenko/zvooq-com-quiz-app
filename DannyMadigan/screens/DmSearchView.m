@@ -205,7 +205,7 @@
     // Do not perform any search while the user is typing.
     // Wait at least 2 seconds after the typing is finished.
     int32_t userIsTypingWatchdogSnapshot = OSAtomicIncrement32(&_userIsTypingWatchdog);
-    double SearchDelaySeconds = 2;
+    double SearchDelaySeconds = 1;
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(SearchDelaySeconds * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         if (userIsTypingWatchdogSnapshot == _userIsTypingWatchdog) {

@@ -160,10 +160,10 @@
 		5B3530211DABBFE600C84346 /* DannyMadigan */ = {
 			isa = PBXGroup;
 			children = (
-				5B4AFE3B1DAF78C70023F455 /* lazy-resources */,
+				5B4AFE3B1DAF78C70023F455 /* lazy-array */,
 				5B4AFE1D1DACE51E0023F455 /* model */,
 				5B4AFE191DACE3A40023F455 /* rest-api */,
-				5B4AFE211DAD17C60023F455 /* screens */,
+				5B4AFE211DAD17C60023F455 /* ui */,
 				5B3530251DABBFE600C84346 /* AppDelegate.h */,
 				5B3530261DABBFE600C84346 /* AppDelegate.m */,
 				5B3530281DABBFE600C84346 /* ViewController.h */,
@@ -223,7 +223,7 @@
 			path = model;
 			sourceTree = "<group>";
 		};
-		5B4AFE211DAD17C60023F455 /* screens */ = {
+		5B4AFE211DAD17C60023F455 /* ui */ = {
 			isa = PBXGroup;
 			children = (
 				5B4AFE291DAD1B220023F455 /* DmMovieCell.h */,
@@ -239,15 +239,17 @@
 				5B4AFE311DAE5BAD0023F455 /* DmSearchView.m */,
 				5B4AFE2E1DAE5B8E0023F455 /* DmSearchView.xib */,
 			);
+			name = ui;
 			path = screens;
 			sourceTree = "<group>";
 		};
-		5B4AFE3B1DAF78C70023F455 /* lazy-resources */ = {
+		5B4AFE3B1DAF78C70023F455 /* lazy-array */ = {
 			isa = PBXGroup;
 			children = (
 				5B4AFE3C1DAF78E00023F455 /* DmMoviesLazyArray.h */,
 				5B4AFE3D1DAF78E00023F455 /* DmMoviesLazyArray.m */,
 			);
+			name = "lazy-array";
 			path = "lazy-resources";
 			sourceTree = "<group>";
 		};

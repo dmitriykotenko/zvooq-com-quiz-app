@@ -112,7 +112,7 @@
                 </scrollView>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0z-uP-Uun">
                     <frame key="frameInset" minX="10" minY="30" width="68" height="30"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="0.5" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="czu-fN-6cL"/>
                     </constraints>
