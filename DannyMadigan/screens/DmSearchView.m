@@ -10,12 +10,18 @@
 
 #import <AFNetworking.h>
 
+#import <libkern/OSAtomic.h>
+
 #import "AppDelegate.h"
 #import "DmRestApi.h"
 
 
 
 @interface DmSearchView () <UISearchBarDelegate>
+{
+    int32_t _searchVersion;
+    int32_t _userIsTypingWatchdog;
+}
 
 @property (strong, nonatomic) IBOutlet UIView * mainView;
 
@@ -113,7 +119,9 @@
 - (void)search
 {
     self.searchHasSucceeded = NO;
-    // Todo: cancel previous search.
+
+    // Cancel all previous searches.
+    int32_t searchVersionSnapshot = OSAtomicIncrement32(&_searchVersion);
     
     // If there is no Internet now, do nothing.
     if (! [AFNetworkReachabilityManager sharedManager].isReachable) {
@@ -131,6 +139,11 @@
      searchBy:query
      page:1
      success:^(DmSearchResults * results) {
+         // If there is a new search in progress, do nothing.
+         if (searchVersionSnapshot != _searchVersion) {
+             return;
+         }
+         
         [self.dataLoadingIndicator stopAnimating];
          self.searchHasSucceeded = YES;
          
@@ -141,6 +154,11 @@
          }
     }
      error:^(NSError *error) {
+         // If there is a new search in progress, do nothing.
+         if (searchVersionSnapshot != _searchVersion) {
+             return;
+         }
+         
         [self.dataLoadingIndicator stopAnimating];
          self.searchFailedLabel.hidden = NO;
          // Do not show 'Try Again' button if there is no internet.
@@ -184,9 +202,18 @@
     
     [self updateAppearanceWithSearchText:self.currentQuery];
 
-    if (self.currentQuery.length > 0) {
-        [self search];
-    }
+    // Do not perform any search while the user is typing.
+    // Wait at least 2 seconds after the typing is finished.
+    int32_t userIsTypingWatchdogSnapshot = OSAtomicIncrement32(&_userIsTypingWatchdog);
+    double SearchDelaySeconds = 2;
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(SearchDelaySeconds * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if (userIsTypingWatchdogSnapshot == _userIsTypingWatchdog) {
+            if (self.currentQuery.length > 0) {
+                [self search];
+            }
+        }
+    });
 }
 
 - (void)updateAppearanceWithSearchText:(NSString *)searchText
