@@ -23,6 +23,7 @@ NSString * DmLoadingDetailedInfoString = @"Loading detailed info...";
 
 @property (weak, nonatomic) IBOutlet UIImageView * posterAspectRatioConstraint;
 
+@property (weak, nonatomic) IBOutlet UIImageView *posterThumbnailImageView;
 @property (weak, nonatomic) IBOutlet UIImageView * posterImageView;
 
 @property (weak, nonatomic) IBOutlet UILabel * titleLabel;
@@ -57,7 +58,8 @@ NSString * DmLoadingDetailedInfoString = @"Loading detailed info...";
 
 - (void)updateWithCurrentMovie
 {
-    [self.posterImageView setImageWithURL:self.movie.posterUrl placeholderImage:[UIImage imageNamed:@"PosterPlaceholder"]];
+    [self.posterThumbnailImageView setImageWithURL:self.movie.posterUrl placeholderImage:[UIImage imageNamed:@"PosterPlaceholder"]];
+    [self.posterImageView setImageWithURL:self.movie.fullsizedPosterUrl];
     
     self.titleLabel.text = self.movie.title;
     
@@ -90,18 +92,16 @@ NSString * DmLoadingDetailedInfoString = @"Loading detailed info...";
     // Hide error panel while the data is loaded.
     self.errorPanelHeightConstraint.constant = 0;
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [[DmRestApi shared]
-         getMovieById:self.movie.movieId
-         success:^(DmMovie * movie) {
-             self.movie = movie;
-             [self updateWithCurrentMovie];
-         }
-         error:^(NSError *error) {
-             self.detailedInfoLabel.text = nil;
-             self.errorPanelHeightConstraint.constant = DmDefaultErrorPanelHeight;
-         }];
-    });
+    [[DmRestApi shared]
+     getMovieById:self.movie.movieId
+     success:^(DmMovie * movie) {
+         self.movie = movie;
+         [self updateWithCurrentMovie];
+     }
+     error:^(NSError *error) {
+         self.detailedInfoLabel.text = nil;
+         self.errorPanelHeightConstraint.constant = DmDefaultErrorPanelHeight;
+     }];
 }
 
 - (IBAction)dismiss:(id)sender

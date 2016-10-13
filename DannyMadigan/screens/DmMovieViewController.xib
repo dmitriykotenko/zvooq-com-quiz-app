@@ -14,6 +14,7 @@
                 <outlet property="errorPanelHeightConstraint" destination="Z7Q-fM-uPP" id="Z4x-Dq-C80"/>
                 <outlet property="posterAspectRatioConstraint" destination="wjI-h9-nSh" id="s0T-TT-QK5"/>
                 <outlet property="posterImageView" destination="wjI-h9-nSh" id="KB0-zr-vtq"/>
+                <outlet property="posterThumbnailImageView" destination="9b1-01-xfW" id="nFp-Rq-oe3"/>
                 <outlet property="summaryLabel" destination="fhd-s7-8aT" id="VX0-bn-byP"/>
                 <outlet property="titleLabel" destination="vtE-az-zj5" id="04j-Xm-Hzn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -26,7 +27,10 @@
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8G-of-6hD">
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wjI-h9-nSh" userLabel="Poster Image View">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9b1-01-xfW" userLabel="Poster Thumbnail Image View">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        </imageView>
+                        <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wjI-h9-nSh" userLabel="Poster Image View">
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="wjI-h9-nSh" secondAttribute="height" multiplier="2:3" id="OUH-Ln-8NS"/>
                             </constraints>
@@ -89,16 +93,21 @@
                         <constraint firstItem="fhd-s7-8aT" firstAttribute="top" secondItem="vtE-az-zj5" secondAttribute="bottom" constant="10" id="6t4-Jn-mDZ"/>
                         <constraint firstItem="vtE-az-zj5" firstAttribute="leading" secondItem="b8G-of-6hD" secondAttribute="leading" constant="30" id="A2s-VL-Bq3"/>
                         <constraint firstItem="p9Z-HS-q8f" firstAttribute="leading" secondItem="vtE-az-zj5" secondAttribute="leading" id="HeG-kV-M4r"/>
+                        <constraint firstItem="9b1-01-xfW" firstAttribute="top" secondItem="wjI-h9-nSh" secondAttribute="top" id="Jzb-Lw-4As"/>
                         <constraint firstItem="Mha-73-7MG" firstAttribute="trailing" secondItem="vtE-az-zj5" secondAttribute="trailing" id="MDF-uj-uZu"/>
                         <constraint firstItem="p9Z-HS-q8f" firstAttribute="trailing" secondItem="vtE-az-zj5" secondAttribute="trailing" id="My9-FW-FbO"/>
                         <constraint firstItem="fhd-s7-8aT" firstAttribute="leading" secondItem="vtE-az-zj5" secondAttribute="leading" id="Npg-yF-bNj"/>
                         <constraint firstAttribute="trailing" secondItem="wjI-h9-nSh" secondAttribute="trailing" id="RLu-ws-G64"/>
                         <constraint firstAttribute="bottom" secondItem="p9Z-HS-q8f" secondAttribute="bottom" constant="38" id="Thq-js-NnH"/>
+                        <constraint firstItem="9b1-01-xfW" firstAttribute="trailing" secondItem="wjI-h9-nSh" secondAttribute="trailing" id="aHt-I6-lWR"/>
                         <constraint firstItem="wjI-h9-nSh" firstAttribute="top" secondItem="b8G-of-6hD" secondAttribute="top" constant="20" id="ahk-em-ktb"/>
                         <constraint firstItem="wjI-h9-nSh" firstAttribute="leading" secondItem="b8G-of-6hD" secondAttribute="leading" id="ciq-Ix-za8"/>
                         <constraint firstAttribute="trailing" secondItem="vtE-az-zj5" secondAttribute="trailing" constant="30" id="gFi-uO-rd8"/>
                         <constraint firstItem="fhd-s7-8aT" firstAttribute="trailing" secondItem="vtE-az-zj5" secondAttribute="trailing" id="jBO-oL-1S9"/>
                         <constraint firstItem="p9Z-HS-q8f" firstAttribute="top" secondItem="Mha-73-7MG" secondAttribute="bottom" id="jnX-GV-ihD"/>
+                        <constraint firstItem="9b1-01-xfW" firstAttribute="width" secondItem="9b1-01-xfW" secondAttribute="height" multiplier="2:3" id="lcB-09-YsF"/>
+                        <constraint firstItem="9b1-01-xfW" firstAttribute="leading" secondItem="wjI-h9-nSh" secondAttribute="leading" id="rPT-47-OVX"/>
+                        <constraint firstItem="9b1-01-xfW" firstAttribute="bottom" secondItem="wjI-h9-nSh" secondAttribute="bottom" id="xDm-4s-KVf"/>
                     </constraints>
                 </scrollView>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0z-uP-Uun">

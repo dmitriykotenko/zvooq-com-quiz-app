@@ -16,6 +16,7 @@
 @property (nonatomic, strong) NSString * movieId;
 @property (nonatomic, strong) NSString * title;
 @property (nonatomic, strong) NSURL * posterUrl;
+@property (nonatomic, strong) NSURL * fullsizedPosterUrl;
 
 // Secondary properties.
 @property (nonatomic) int year;

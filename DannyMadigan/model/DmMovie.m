@@ -19,7 +19,10 @@
         self.title = movieJson[@"Title"];
         
         // Todo: do not clip a poster to 300px width.
-        self.posterUrl = [NSURL URLWithString:movieJson[@"Poster"]];
+        NSString * posterUrlString = movieJson[@"Poster"];
+        self.posterUrl = [NSURL URLWithString:posterUrlString];
+        self.fullsizedPosterUrl = [self fullSizedPosterUrl:posterUrlString];
+        
         
         self.year = [movieJson[@"Year"] intValue];
         
@@ -48,6 +51,12 @@
     }
     
     return self;
+}
+
+- (NSURL *)fullSizedPosterUrl:(NSString *)thumbnailUrlString
+{
+    NSString * fullsizedUrlString = [thumbnailUrlString stringByReplacingOccurrencesOfString:@"_SX300" withString:@""];
+    return [NSURL URLWithString:fullsizedUrlString];
 }
 
 @end
