@@ -11,6 +11,7 @@
 #import <AFNetworking.h>
 
 #import "DmRestApi.h"
+#import "DmMoviesListViewController.h"
 
 
 
@@ -30,6 +31,11 @@ NSString * DmNotificationReachabilityHasChanged = @"DmNotificationReachabilityHa
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [self setupReachabilityNotifications];
+    
+    UIViewController * moviesListViewController = [DmMoviesListViewController new];
+    self.window.rootViewController = moviesListViewController;
+    self.window.makeKeyAndVisible;
+    
     return YES;
 }
 

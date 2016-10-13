@@ -27,7 +27,7 @@
                         <constraint firstAttribute="height" priority="750" constant="68" id="DJX-T5-IAh"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NbQ-ja-wQq" userLabel="Last Query view">
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NbQ-ja-wQq" userLabel="Last Query view">
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Your last search: &quot;Day&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLf-4K-Jgc">
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -57,7 +57,7 @@
                         <outlet property="delegate" destination="-1" id="NKo-at-NEF"/>
                     </connections>
                 </collectionView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="No Results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEk-AV-zgg">
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="No Results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEk-AV-zgg">
                     <frame key="frameInset" minX="130" minY="156" width="115" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
@@ -67,7 +67,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Ol3-dL-0WF" firstAttribute="top" secondItem="NbQ-ja-wQq" secondAttribute="bottom" id="5Mz-HZ-lzH"/>
-                <constraint firstItem="JEk-AV-zgg" firstAttribute="top" secondItem="Ol3-dL-0WF" secondAttribute="top" constant="60" id="5g9-by-o2d"/>
+                <constraint firstItem="JEk-AV-zgg" firstAttribute="top" secondItem="Ol3-dL-0WF" secondAttribute="top" constant="20" id="5g9-by-o2d"/>
                 <constraint firstAttribute="trailing" secondItem="NbQ-ja-wQq" secondAttribute="trailing" id="Khb-le-2m8"/>
                 <constraint firstAttribute="bottom" secondItem="Ol3-dL-0WF" secondAttribute="bottom" id="Xgu-Hh-cTQ"/>
                 <constraint firstItem="IHJ-4u-PA0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YN4-6m-L4f"/>

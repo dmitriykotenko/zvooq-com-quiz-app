@@ -13,7 +13,6 @@
 		5B3530241DABBFE600C84346 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3530231DABBFE600C84346 /* main.m */; };
 		5B3530271DABBFE600C84346 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3530261DABBFE600C84346 /* AppDelegate.m */; };
 		5B35302A1DABBFE600C84346 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3530291DABBFE600C84346 /* ViewController.m */; };
-		5B35302D1DABBFE600C84346 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B35302B1DABBFE600C84346 /* Main.storyboard */; };
 		5B35302F1DABBFE600C84346 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B35302E1DABBFE600C84346 /* Assets.xcassets */; };
 		5B3530321DABBFE600C84346 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3530301DABBFE600C84346 /* LaunchScreen.storyboard */; };
 		5B35303D1DABBFE600C84346 /* DannyMadiganTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B35303C1DABBFE600C84346 /* DannyMadiganTests.m */; };
@@ -30,6 +29,7 @@
 		5B4AFE391DAEA73E0023F455 /* DmMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AFE371DAEA73E0023F455 /* DmMovieViewController.m */; };
 		5B4AFE3A1DAEA73E0023F455 /* DmMovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B4AFE381DAEA73E0023F455 /* DmMovieViewController.xib */; };
 		5B4AFE3E1DAF78E00023F455 /* DmMoviesLazyArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AFE3D1DAF78E00023F455 /* DmMoviesLazyArray.m */; };
+		5B4AFE411DAFB0770023F455 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B4AFE3F1DAFB0760023F455 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +59,6 @@
 		5B3530261DABBFE600C84346 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5B3530281DABBFE600C84346 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5B3530291DABBFE600C84346 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5B35302C1DABBFE600C84346 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B35302E1DABBFE600C84346 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B3530311DABBFE600C84346 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B3530331DABBFE600C84346 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,6 +88,7 @@
 		5B4AFE381DAEA73E0023F455 /* DmMovieViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DmMovieViewController.xib; sourceTree = "<group>"; };
 		5B4AFE3C1DAF78E00023F455 /* DmMoviesLazyArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DmMoviesLazyArray.h; sourceTree = "<group>"; };
 		5B4AFE3D1DAF78E00023F455 /* DmMoviesLazyArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DmMoviesLazyArray.m; sourceTree = "<group>"; };
+		5B4AFE401DAFB0760023F455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		621029365F5E51EE2B5C3FE0 /* Pods-DannyMadiganUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DannyMadiganUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DannyMadiganUITests/Pods-DannyMadiganUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6E51C2819910EA5487F0FBFD /* libPods-DannyMadiganUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DannyMadiganUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		850700DFE7268BF4248C563D /* Pods-DannyMadiganUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DannyMadiganUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DannyMadiganUITests/Pods-DannyMadiganUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 				5B3530261DABBFE600C84346 /* AppDelegate.m */,
 				5B3530281DABBFE600C84346 /* ViewController.h */,
 				5B3530291DABBFE600C84346 /* ViewController.m */,
-				5B35302B1DABBFE600C84346 /* Main.storyboard */,
+				5B4AFE3F1DAFB0760023F455 /* Main.storyboard */,
 				5B35302E1DABBFE600C84346 /* Assets.xcassets */,
 				5B3530301DABBFE600C84346 /* LaunchScreen.storyboard */,
 				5B3530331DABBFE600C84346 /* Info.plist */,
@@ -378,13 +378,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B4AFE411DAFB0770023F455 /* Main.storyboard in Resources */,
 				5B3530321DABBFE600C84346 /* LaunchScreen.storyboard in Resources */,
 				5B4AFE2D1DAD1B220023F455 /* DmMovieCell.xib in Resources */,
 				5B35302F1DABBFE600C84346 /* Assets.xcassets in Resources */,
 				5B4AFE2F1DAE5B8E0023F455 /* DmSearchView.xib in Resources */,
 				5B4AFE261DAD17DB0023F455 /* DmMoviesListViewController.xib in Resources */,
 				5B4AFE3A1DAEA73E0023F455 /* DmMovieViewController.xib in Resources */,
-				5B35302D1DABBFE600C84346 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,20 +578,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5B35302B1DABBFE600C84346 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5B35302C1DABBFE600C84346 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5B3530301DABBFE600C84346 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5B3530311DABBFE600C84346 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5B4AFE3F1DAFB0760023F455 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B4AFE401DAFB0760023F455 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
