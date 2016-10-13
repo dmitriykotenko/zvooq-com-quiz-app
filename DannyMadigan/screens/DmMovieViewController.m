@@ -72,13 +72,15 @@ NSString * DmLoadingDetailedInfoString = @"Loading detailed info...";
 
 - (NSString *)formatSummaryForMovie:(DmMovie *)movie
 {
-    return [NSString stringWithFormat:@"Year: %d\nDirector: %@\nWriter: %@", movie.year, movie.director, movie.writer];
+    return [NSString stringWithFormat:@"Year: %d", movie.year];
 }
 
 - (NSString *)formatDetailedInfoForMovie:(DmMovie *)movie
 {
-    return [NSString stringWithFormat:@"Rated: %@\nRuntime: %@\nGenre: %@\n\nActors: %@\n\nPlot: %@\n\nLanguage: %@",
-            movie.rated, movie.runtime, movie.genre, movie.actors, movie.plot, movie.language];
+    return [NSString stringWithFormat:@"Director: %@\nWriter: %@\n\nRated: %@\nRuntime: %@\nGenre: %@\nLanguage: %@\n\nActors: %@\n\nPlot: %@",
+            movie.director, movie.writer,
+            movie.rated, movie.runtime, movie.genre, movie.language,
+            movie.actors, movie.plot];
 }
 
 - (IBAction)reloadDetailedInfo
