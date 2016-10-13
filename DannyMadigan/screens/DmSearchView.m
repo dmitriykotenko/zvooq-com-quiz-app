@@ -86,18 +86,17 @@
     
     [self.dataLoadingIndicator startAnimating];
     
-    DmSearchResults * results = [DmSearchResults new];
-    results.query = self.searchBar.text;
+    NSString * query = self.searchBar.text;
     
     [[DmRestApi shared]
-     searchBy:results.query
+     searchBy:query
      page:1
-     success:^(NSArray *films, NSUInteger total) {
+     success:^(DmSearchResults * results) {
         [self.dataLoadingIndicator stopAnimating];
-         results.movies = films;
-         
+         DmMoviesLazyArray * lazyArray = [[DmMoviesLazyArray alloc] initWithSearchResults:results];
+
          if (self.searchDidFinish) {
-             self.searchDidFinish(results, nil);
+             self.searchDidFinish(lazyArray, nil);
          }
     }
      error:^(NSError *error) {

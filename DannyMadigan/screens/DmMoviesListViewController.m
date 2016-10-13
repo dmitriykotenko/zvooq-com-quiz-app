@@ -26,6 +26,8 @@ const CGFloat DmMoviesCollectionViewPadding = DmMoviesCollectionViewSpacing;
 
 @property (nonatomic, strong) NSString * searchQuery;
 @property (nonatomic, strong) NSString * lastSearchQuery;
+
+@property (nonatomic, strong) DmMoviesLazyArray * moviesLazyArray;
 @property (nonatomic, strong) NSArray * movies;
 
 @end
@@ -41,9 +43,11 @@ const CGFloat DmMoviesCollectionViewPadding = DmMoviesCollectionViewSpacing;
     
     [self setupMoviesCollectionView];
     
-    self.searchView.searchDidFinish = ^(DmSearchResults * results, NSError * error) {
+    self.searchView.searchDidFinish = ^(DmMoviesLazyArray * lazyArray, NSError * error) {
         if (!error) {
-            self.movies = results.movies;
+            self.moviesLazyArray = lazyArray;
+            self.movies = lazyArray.movies;
+
             [self.moviesCollectionView reloadData];
         }
     };
@@ -61,34 +65,6 @@ const CGFloat DmMoviesCollectionViewPadding = DmMoviesCollectionViewSpacing;
     layout.minimumInteritemSpacing = DmMoviesCollectionViewSpacing;
     
     layout.itemSize = [self movieCellSize];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-    [self loadData];
-}
-
-- (void)loadData
-{
-    // Todo: show activity indicator.
-    
-    [[DmRestApi shared]
-     searchBy:@"day"
-     page:1
-     success:^(NSArray *films, NSUInteger total) {
-         self.movies = films;
-         [self.moviesCollectionView reloadData];
-    }
-     error:^(NSError *error) {
-         [[[UIAlertView alloc]
-          initWithTitle:@"Network error"
-          message:@"Please try again later"
-          delegate:nil
-          cancelButtonTitle:@"Dismiss"
-          otherButtonTitles:nil] show];
-    }];
 }
 
 - (CGSize)movieCellSize

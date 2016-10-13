@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 
 #import "DmSearchResults.h"
+#import "DmMoviesLazyArray.h"
+
 
 @interface DmSearchView : UIView
 
 // Signal: (query, results, loadingIsInProgress, error)
-@property (nonatomic, copy) void (^searchDidFinish)(DmSearchResults * results, NSError * error);
+@property (nonatomic, copy) void (^searchDidFinish)(DmMoviesLazyArray * moviesLazyArray, NSError * error);
 
 @end

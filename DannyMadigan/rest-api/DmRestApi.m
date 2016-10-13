@@ -50,7 +50,7 @@ const NSString * DmRestApiResultFormat = @"json";
 
 - (void)searchBy:(NSString *)searchQuery
             page:(NSUInteger)page
-         success:(void (^)(NSArray *, NSUInteger))successHandler
+         success:(void (^)(DmSearchResults *))successHandler
            error:(void (^)(NSError *))errorHandler
 {
     // Todo: custom error domain.
@@ -67,6 +67,9 @@ const NSString * DmRestApiResultFormat = @"json";
       @"page": [NSNumber numberWithUnsignedLong:page],
       @"r": DmRestApiResultFormat
       };
+
+    DmSearchResults * results = [DmSearchResults new];
+    results.query = searchQuery;
     
     [self.sessionManager
      GET:@""
@@ -85,7 +88,10 @@ const NSString * DmRestApiResultFormat = @"json";
              }
          }
          
-         successHandler(movies, total);
+         results.totalNumberOfMovies = total;
+         results.movies = movies;
+         
+         successHandler(results);
      }
      failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
          errorHandler(error);

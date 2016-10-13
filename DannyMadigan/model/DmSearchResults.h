@@ -11,6 +11,7 @@
 @interface DmSearchResults : NSObject
 
 @property (nonatomic, strong) NSString * query;
+@property (nonatomic) int totalNumberOfMovies;
 @property (nonatomic, strong) NSArray * movies;
 
 @end

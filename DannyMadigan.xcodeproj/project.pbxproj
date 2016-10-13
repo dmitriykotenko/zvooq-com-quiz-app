@@ -29,6 +29,7 @@
 		5B4AFE351DAE5CFA0023F455 /* DmSearchResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AFE341DAE5CFA0023F455 /* DmSearchResults.m */; };
 		5B4AFE391DAEA73E0023F455 /* DmMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AFE371DAEA73E0023F455 /* DmMovieViewController.m */; };
 		5B4AFE3A1DAEA73E0023F455 /* DmMovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B4AFE381DAEA73E0023F455 /* DmMovieViewController.xib */; };
+		5B4AFE3E1DAF78E00023F455 /* DmMoviesLazyArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AFE3D1DAF78E00023F455 /* DmMoviesLazyArray.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,8 @@
 		5B4AFE361DAEA73E0023F455 /* DmMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DmMovieViewController.h; sourceTree = "<group>"; };
 		5B4AFE371DAEA73E0023F455 /* DmMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DmMovieViewController.m; sourceTree = "<group>"; };
 		5B4AFE381DAEA73E0023F455 /* DmMovieViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DmMovieViewController.xib; sourceTree = "<group>"; };
+		5B4AFE3C1DAF78E00023F455 /* DmMoviesLazyArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DmMoviesLazyArray.h; sourceTree = "<group>"; };
+		5B4AFE3D1DAF78E00023F455 /* DmMoviesLazyArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DmMoviesLazyArray.m; sourceTree = "<group>"; };
 		621029365F5E51EE2B5C3FE0 /* Pods-DannyMadiganUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DannyMadiganUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DannyMadiganUITests/Pods-DannyMadiganUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6E51C2819910EA5487F0FBFD /* libPods-DannyMadiganUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DannyMadiganUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		850700DFE7268BF4248C563D /* Pods-DannyMadiganUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DannyMadiganUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DannyMadiganUITests/Pods-DannyMadiganUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +160,7 @@
 		5B3530211DABBFE600C84346 /* DannyMadigan */ = {
 			isa = PBXGroup;
 			children = (
+				5B4AFE3B1DAF78C70023F455 /* lazy-resources */,
 				5B4AFE1D1DACE51E0023F455 /* model */,
 				5B4AFE191DACE3A40023F455 /* rest-api */,
 				5B4AFE211DAD17C60023F455 /* screens */,
@@ -236,6 +240,15 @@
 				5B4AFE2E1DAE5B8E0023F455 /* DmSearchView.xib */,
 			);
 			path = screens;
+			sourceTree = "<group>";
+		};
+		5B4AFE3B1DAF78C70023F455 /* lazy-resources */ = {
+			isa = PBXGroup;
+			children = (
+				5B4AFE3C1DAF78E00023F455 /* DmMoviesLazyArray.h */,
+				5B4AFE3D1DAF78E00023F455 /* DmMoviesLazyArray.m */,
+			);
+			path = "lazy-resources";
 			sourceTree = "<group>";
 		};
 		F0783CC3E373C6B292A29525 /* Pods */ = {
@@ -524,6 +537,7 @@
 				5B4AFE251DAD17DB0023F455 /* DmMoviesListViewController.m in Sources */,
 				5B4AFE321DAE5BAD0023F455 /* DmSearchView.m in Sources */,
 				5B4AFE391DAEA73E0023F455 /* DmMovieViewController.m in Sources */,
+				5B4AFE3E1DAF78E00023F455 /* DmMoviesLazyArray.m in Sources */,
 				5B3530271DABBFE600C84346 /* AppDelegate.m in Sources */,
 				5B3530241DABBFE600C84346 /* main.m in Sources */,
 				5B4AFE351DAE5CFA0023F455 /* DmSearchResults.m in Sources */,

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "DmMovie.h"
+#import "DmSearchResults.h"
 
 
 
@@ -18,7 +19,7 @@
 
 - (void)searchBy:(NSString *)searchQuery
             page:(NSUInteger)page
-         success:(void (^)(NSArray * films, NSUInteger total))successHandler
+         success:(void (^)(DmSearchResults * searchResults))successHandler
            error:(void (^)(NSError * error))errorHandler;
 
 - (void)getMovieById:(NSString *)movieId
