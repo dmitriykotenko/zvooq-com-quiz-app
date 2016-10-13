@@ -152,7 +152,7 @@ const CGFloat DmMoviesCollectionViewPadding = DmMoviesCollectionViewSpacing;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{    
+{
     if (scrollView.contentSize.height - scrollView.contentOffset.y - scrollView.frame.size.height < 100) {
         [self tryToLoadNextPage];
     }
