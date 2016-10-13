@@ -98,6 +98,7 @@ NSString * DmLoadingDetailedInfoString = @"Loading detailed info...";
              [self updateWithCurrentMovie];
          }
          error:^(NSError *error) {
+             self.detailedInfoLabel.text = nil;
              self.errorPanelHeightConstraint.constant = DmDefaultErrorPanelHeight;
          }];
     });

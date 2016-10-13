@@ -27,6 +27,7 @@ const CGFloat DmMoviesCollectionViewPadding = DmMoviesCollectionViewSpacing;
 
 @property (weak, nonatomic) IBOutlet DmSearchView * searchView;
 @property (weak, nonatomic) IBOutlet UICollectionView * moviesCollectionView;
+@property (weak, nonatomic) IBOutlet UILabel *noResultsLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel * queryAnnotationLabel;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *queryAnnotationHeightConstraint;
@@ -62,7 +63,8 @@ const CGFloat DmMoviesCollectionViewPadding = DmMoviesCollectionViewSpacing;
                 // Do nothing if the lazy array has been changed.
                 if (!error && (lazyArray == self.moviesLazyArray)) {
                     self.movies = allMovies;
-                    [self.moviesCollectionView reloadData];
+                    
+                    [self reloadMoviesCollectionView];
                 }
                 // Todo: show error.
 
@@ -73,13 +75,20 @@ const CGFloat DmMoviesCollectionViewPadding = DmMoviesCollectionViewSpacing;
 
             [self updateQueryAnnotation];
             
-            [self.moviesCollectionView reloadData];
+            [self reloadMoviesCollectionView];
         }
     };
     
     self.searchView.searchQueryDidChange = ^(NSString * currentQuery) {
         [self updateQueryAnnotation];
     };
+}
+
+- (void)reloadMoviesCollectionView
+{
+    self.noResultsLabel.hidden = self.moviesLazyArray.movies.count > 0;
+
+    [self.moviesCollectionView reloadData];
 }
 
 - (void)setupMoviesCollectionView
@@ -105,7 +114,7 @@ const CGFloat DmMoviesCollectionViewPadding = DmMoviesCollectionViewSpacing;
 
 - (void)updateQueryAnnotation
 {
-    if ([self.moviesLazyArray.query isEqualToString:self.searchView.currentQuery]) {
+    if ([self.moviesLazyArray.query isEqualToString:self.searchView.currentQuery] || self.moviesLazyArray.movies.count == 0) {
         [self hideQueryAnnotation];
     } else {
         self.queryAnnotationLabel.text = [NSString stringWithFormat:@"Results for query “%@”:", self.moviesLazyArray.query];

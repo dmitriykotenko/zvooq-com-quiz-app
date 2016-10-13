@@ -9,6 +9,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DmMoviesListViewController">
             <connections>
                 <outlet property="moviesCollectionView" destination="Ol3-dL-0WF" id="fNc-f3-Mh1"/>
+                <outlet property="noResultsLabel" destination="JEk-AV-zgg" id="6ed-cy-Xng"/>
                 <outlet property="queryAnnotationHeightConstraint" destination="E1J-47-ZPE" id="IhQ-Ud-aEx"/>
                 <outlet property="queryAnnotationLabel" destination="oLf-4K-Jgc" id="AZB-n3-t1x"/>
                 <outlet property="searchView" destination="IHJ-4u-PA0" id="gKI-9o-qb3"/>
@@ -56,15 +57,23 @@
                         <outlet property="delegate" destination="-1" id="NKo-at-NEF"/>
                     </connections>
                 </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="No Results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEk-AV-zgg">
+                    <frame key="frameInset" minX="130" minY="156" width="115" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Ol3-dL-0WF" firstAttribute="top" secondItem="NbQ-ja-wQq" secondAttribute="bottom" id="5Mz-HZ-lzH"/>
+                <constraint firstItem="JEk-AV-zgg" firstAttribute="top" secondItem="Ol3-dL-0WF" secondAttribute="top" constant="60" id="5g9-by-o2d"/>
                 <constraint firstAttribute="trailing" secondItem="NbQ-ja-wQq" secondAttribute="trailing" id="Khb-le-2m8"/>
                 <constraint firstAttribute="bottom" secondItem="Ol3-dL-0WF" secondAttribute="bottom" id="Xgu-Hh-cTQ"/>
                 <constraint firstItem="IHJ-4u-PA0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YN4-6m-L4f"/>
                 <constraint firstItem="IHJ-4u-PA0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="cKQ-Rq-Hfo"/>
                 <constraint firstAttribute="trailing" secondItem="IHJ-4u-PA0" secondAttribute="trailing" id="jpU-uh-ReK"/>
+                <constraint firstItem="JEk-AV-zgg" firstAttribute="centerX" secondItem="Ol3-dL-0WF" secondAttribute="centerX" id="ndy-fM-jKr"/>
                 <constraint firstAttribute="trailing" secondItem="Ol3-dL-0WF" secondAttribute="trailing" id="pBf-Pk-Ktu"/>
                 <constraint firstItem="Ol3-dL-0WF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pn2-iX-mNF"/>
                 <constraint firstItem="NbQ-ja-wQq" firstAttribute="top" secondItem="IHJ-4u-PA0" secondAttribute="bottom" id="xeu-VC-Bel"/>
