@@ -14,7 +14,10 @@
 
 @interface DmSearchView : UIView
 
+- (NSString *)currentQuery;
+
 // Signal: (query, results, loadingIsInProgress, error)
+@property (nonatomic, copy) void (^searchQueryDidChange)(NSString * currentQuery);
 @property (nonatomic, copy) void (^searchDidFinish)(DmMoviesLazyArray * moviesLazyArray, NSError * error);
 
 - (void)hideKeyboard;

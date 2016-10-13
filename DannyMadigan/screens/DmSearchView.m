@@ -68,6 +68,11 @@
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.mainView attribute:NSLayoutAttributeBottom multiplier:1 constant:0]];
 }
 
+- (NSString *)currentQuery
+{
+    return [self.searchBar.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+}
+
 - (IBAction)retrySearch:(id)sender
 {
     [self search];
@@ -130,11 +135,13 @@
     textDidChange:(NSString *)searchText
 {
     // Todo: throttling.
-    NSString * trimmedText = [searchText stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    if (self.searchQueryDidChange) {
+        self.searchQueryDidChange(self.currentQuery);
+    }
     
-    [self updateAppearanceWithSearchText:trimmedText];
+    [self updateAppearanceWithSearchText:self.currentQuery];
 
-    if (searchText.length > 0) {
+    if (self.currentQuery.length > 0) {
         [self search];
     }
 }

@@ -9,6 +9,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DmMoviesListViewController">
             <connections>
                 <outlet property="moviesCollectionView" destination="Ol3-dL-0WF" id="fNc-f3-Mh1"/>
+                <outlet property="queryAnnotationHeightConstraint" destination="E1J-47-ZPE" id="IhQ-Ud-aEx"/>
+                <outlet property="queryAnnotationLabel" destination="oLf-4K-Jgc" id="AZB-n3-t1x"/>
                 <outlet property="searchView" destination="IHJ-4u-PA0" id="gKI-9o-qb3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -34,6 +36,7 @@
                     </subviews>
                     <color key="backgroundColor" red="0.99267965560000004" green="0.88365846869999998" blue="0.87118136879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="31" id="E1J-47-ZPE"/>
                         <constraint firstAttribute="bottom" secondItem="oLf-4K-Jgc" secondAttribute="bottom" constant="8" id="GcN-Zi-Cdo"/>
                         <constraint firstAttribute="trailing" secondItem="oLf-4K-Jgc" secondAttribute="trailing" constant="87" id="PMt-wS-bC5"/>
                         <constraint firstItem="oLf-4K-Jgc" firstAttribute="top" secondItem="NbQ-ja-wQq" secondAttribute="top" constant="8" id="Xfz-HD-af2"/>

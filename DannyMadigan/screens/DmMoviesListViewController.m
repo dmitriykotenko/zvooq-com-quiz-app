@@ -19,6 +19,7 @@
 
 const CGFloat DmMoviesCollectionViewSpacing = 20;
 const CGFloat DmMoviesCollectionViewPadding = DmMoviesCollectionViewSpacing;
+const CGFloat DmVeryLargeHeight = 1000000;
 
 
 @interface DmMoviesListViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
@@ -27,6 +28,9 @@ const CGFloat DmMoviesCollectionViewPadding = DmMoviesCollectionViewSpacing;
 
 @property (weak, nonatomic) IBOutlet DmSearchView * searchView;
 @property (weak, nonatomic) IBOutlet UICollectionView * moviesCollectionView;
+
+@property (weak, nonatomic) IBOutlet UILabel * queryAnnotationLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *queryAnnotationHeightConstraint;
 
 @property (nonatomic, strong) NSString * searchQuery;
 @property (nonatomic, strong) NSString * lastSearchQuery;
@@ -65,8 +69,14 @@ const CGFloat DmMoviesCollectionViewPadding = DmMoviesCollectionViewSpacing;
                 }
             };
 
+            [self updateQueryAnnotation];
+            
             [self.moviesCollectionView reloadData];
         }
+    };
+    
+    self.searchView.searchQueryDidChange = ^(NSString * currentQuery) {
+        [self updateQueryAnnotation];
     };
 }
 
@@ -91,24 +101,25 @@ const CGFloat DmMoviesCollectionViewPadding = DmMoviesCollectionViewSpacing;
     return [DmMovieCell sizeForWidth:width];
 }
 
-- (void)showNetworkError
+- (void)updateQueryAnnotation
 {
-    
+    if ([self.moviesLazyArray.query isEqualToString:self.searchView.currentQuery]) {
+        [self hideQueryAnnotation];
+    } else {
+        self.queryAnnotationLabel.text = [NSString stringWithFormat:@"Results for query “%@”:", self.moviesLazyArray.query];
+
+        [self showQueryAnnotation];
+    }
 }
 
-- (void)hideNetworkError
+- (void)showQueryAnnotation
 {
-    
+    self.queryAnnotationHeightConstraint.constant = DmVeryLargeHeight;
 }
 
-- (void)showDataLoadingIndicator
+- (void)hideQueryAnnotation
 {
-    
-}
-
-- (void)hideDataLoadingIndicator
-{
-    
+    self.queryAnnotationHeightConstraint.constant = 0;
 }
 
 - (void)showLoadingMoreIndicator
